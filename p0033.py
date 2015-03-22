@@ -20,4 +20,4 @@ for d in range(10, 100):
 
 product = reduce(mul, curious, 1)
 
-print(product.denominator)
+print(product.denominator) # 100
