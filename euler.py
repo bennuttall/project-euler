@@ -16,7 +16,7 @@ def is_pandigital(number, n=None):
 
 def is_prime(n):
     """
-    Returns True is n is prime, otherwise returns False.
+    Returns True if n is prime, otherwise returns False.
     """
 
     if n < 2:
@@ -29,3 +29,17 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+def concatenated_product(n, m):
+    """
+    Returns the concatenated product of n and each element of (1, 2, ... , m).
+
+    e.g. 192 and (1,2,3) => 192384576
+
+    192 * 1 = 192
+    192 * 2 = 384
+    192 * 3 = 576
+    """
+
+    t = range(1, m+1)
+    return ''.join(str(n*i) for i in t)
